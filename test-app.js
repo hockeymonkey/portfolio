@@ -29,7 +29,9 @@ app.get('/', (req, res) => {
 //------------------------------------
 // Route for 'get-pics'.
 //------------------------------------
-app.get('/new-pics', (req, res) => {
+app.get('/get-pics', (req, res) => {
+
+	console.log("Received request from test-photos.js!");
 
 	// Number of urls to pictures to return.
 	const numberPics = 5;
