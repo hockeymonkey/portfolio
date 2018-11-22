@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 // Set up home directory for serving static content.
 //------------------------------------
 app.use(express.static(path.join(__dirname), {
-  extensions: ['html']
+ // extensions: ['html']
 }));
 
 // --- Not sure what this does for new server. ---
@@ -52,11 +52,13 @@ app.get('/get-pics', (req, res) => {
 
 	};
 
-	// Console log array of picture paths.
-	console.log('Sent file paths: ' + selectedFiles);
 
 	// Respond with array as a string.
 	res.json(selectedFiles);
+
+	// Console log array of picture paths.
+	console.log('Sent file paths: ' + selectedFiles);
+
 
 });
 
